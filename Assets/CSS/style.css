@@ -1,0 +1,405 @@
+ *{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+body{
+    font-family: 'Sora', sans-serif;
+    color:rgb(207,207,207);
+    /* background-color:rgb(29,29,29);  */
+    
+    /* Apply the radial gradient as the background image */
+    background-image: radial-gradient(circle at top right, 
+                                      rgba(24, 51, 37, 0.999) 0%, /* Green at the center of the "radiation" */
+                                      rgb(29,29,29) 25%,  /* Transition to a dark color */
+                                      #000 100%),             /* Solid black at the edges */
+                    radial-gradient(circle at bottom left,
+                                      rgba(24, 51, 37, 0.999) 0%, /* Green at the center of the "radiation" */
+                                      rgb(29,29,29) 25%,  /* Transition to a dark color */
+                                      #000 100%);
+    
+    /* Ensure the background covers the entire viewport */
+    background-size: cover; 
+    
+    /* Keep the background fixed in place when the user scrolls */
+    background-attachment: fixed; 
+    
+    /* Set default text color to white for visibility */
+    color: white; 
+    
+    /* Add some padding for example content */
+    padding: 20px;
+    margin: 0;
+}
+
+input, button, textarea{
+    font-family:inherit;
+}
+
+.navigation{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    padding:0px 120px;
+    padding-bottom:2vh;
+    height:10%;
+    margin-top:0;
+}
+.navigation .links{
+    padding-top:35px;
+}
+.navigation h1{
+    padding-top:20px;
+}
+.links a{
+    text-decoration:none;
+    color:white;
+    padding:0px 15px;
+}
+.navigation button{
+    height:6vh;
+    margin-top:20px;
+    width:7vw;
+    border-radius:10px;
+}
+.body{
+    border:1px solid rgb(96, 95, 95);
+    width:95%;
+    border-radius:10px;
+    margin:0 auto; 
+}
+.main{
+    display:flex;
+    gap:50px;
+
+}
+.left_content{
+    margin:50px;
+    padding:20px;
+    height:fit-content;
+    text-align:center;
+    margin-bottom:20px;
+    border:.1px solid rgb(86, 86, 86);
+    border-radius:10px;
+    position:sticky;
+    top:30px;
+    perspective:1000px;
+}
+.left_content {
+   transform:
+    perspective(1000px)
+    rotateY(2deg)
+    rotateX(-5deg)
+    rotateY(15deg)
+}
+
+.text_element > h2, .text_element > p{
+    margin-top:17px;
+}
+
+.left_content #profile{
+    background-color:#55E6A5;
+}
+.intro_text{
+    padding-top:100px;
+    font-size:60px;
+}
+.intro_text span{
+    color:#55E6A5;
+}
+svg{
+    border:1px solid rgb(119, 116, 116);
+    margin-top:10px;
+    padding:5px;
+    border-radius:50%;
+}
+.statistics{
+    margin:70px 0px;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:center;
+    font-size:20px;
+    font-weight:200;
+}
+.statistics button{
+    padding:10px;
+    background-color:transparent;
+    color:white;
+    border:1px solid white;
+}
+#number{
+    font-size:60px;
+    font-weight:400;
+}
+
+.years_of_experience{
+    display:flex;
+    align-items:center;
+    gap:10px; 
+}
+.clients{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.about_us{
+    padding-bottom:100px;  
+}
+
+.resume{
+    padding-bottom:100px;
+}
+#resume{
+    font-size:30px;
+    font-weight:400;
+    border-bottom:1px solid rgb(114, 114, 114);
+    width:710px;
+    padding-bottom:10px;
+}
+
+table, td,tr{
+    border-bottom:1px solid rgb(114, 114, 114);
+    border-collapse:collapse;
+}
+tr{height:100px}
+#time_as_years{
+    text-align:left;
+    width:200px;
+}
+#time_as_years span{
+    border:1px solid rgb(114, 114, 114);
+    border-radius:80px;
+    padding:7px;
+}
+#workspace{
+    text-align:left;
+    width:400px;
+}
+#icons{
+    text-align:left;
+    width:100px;
+}
+
+#skills{
+    font-size:30px;
+    font-weight:400;
+    border-bottom:1px solid rgb(114, 114, 114);
+    width:710px;
+    padding-bottom:10px;
+}
+.grid_elements{
+    margin-top:50px;
+    display:grid;
+    gap:20px;
+    grid-template-columns:repeat(2, 1fr);
+    grid-template-rows:repeat(2, 1fr);
+}
+.box{
+    border:1px solid rgb(114, 114, 114);
+    border-radius:10px;
+    padding:20px 0px;
+}
+#services{
+    font-size:30px;
+    font-weight:400;
+    border-bottom:1px solid rgb(114, 114, 114);
+    width:1300px;
+    padding-bottom:10px;
+    margin-left:50px;
+    margin-top:100px;
+}
+.service_showcase{
+    display:grid;
+    gap:30px;
+    grid-template-columns:20vw 20vw 20vw 20vw;
+    justify-content:center;
+    margin-top:70px;
+}
+
+.body{
+    border:1px solid rgb(114, 114, 114);
+    padding:20px;
+}
+
+.boxes{
+    display:flex;
+    gap:20px;
+}
+.boxes p{
+    border: 1px solid rgb(114, 114, 114);
+    border-radius:10px;
+    padding:5px;
+    font-size:12px;
+    margin-top:10px;
+}
+.portifolio{
+    margin-bottom:70px;
+}
+#portifolio{
+    font-size:30px;
+    font-weight:400;
+    border-bottom:1px solid rgb(114, 114, 114);
+    width:1300px;
+    padding-bottom:10px;
+    margin-left:50px;
+    margin-top:100px;
+    margin-bottom:70px;
+}
+
+.grid_head{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+}
+.grid_head img{
+    border-radius:5px;
+}
+
+#branding{
+    border:1px solid rgb(114, 114, 114);
+    border-radius:10px;
+    padding:5px;
+    width:fit-content;
+    font-size:10px;
+}
+.images{
+    padding:5px;
+    border-radius:5px;
+}
+.images:hover{
+    border:1px solid #55E6A5;
+}
+/* FOR THE HOVER USE THE BEFORE :: STUFFS MAYBE IT CAN HELP */
+.grid_foot{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    margin-top:60px;
+}
+
+.image{
+    width:396.66px;
+    height:400px;
+    overflow:hidden;
+}
+
+.image img{
+    position:relative;
+    right:200px;
+    border-radius:5px;
+}
+
+.caption{
+    margin-top:30px;
+}
+
+.caption p{
+    padding-top:10px;
+    padding-right:20px;
+}
+
+.get_in_touch{
+   border-top: 1px solid rgb(114, 114, 114);
+   margin:0px 25px;
+   display:flex;
+   gap:100px;
+   padding-top:100px;
+   margin-bottom:70px;
+}
+
+#get_in_touch{
+    border:1px solid rgb(187, 187, 187);
+    padding:5px;
+    border-radius:10px;
+    width:fit-content;
+}
+#brilliant{
+    font-size:50px;
+    margin-top:10px;
+    margin-bottom:20px;
+}
+#work{
+    color:rgba(212, 212, 212, 0.867);
+    margin-bottom: 50px;
+}
+
+#tel{
+    margin-bottom: 70px;
+}
+
+#tel a{
+    color: #55E6A5;
+    font-size:30px;
+    text-decoration:underline;
+}
+
+.hrefs a{
+    text-decoration:none;
+    color:white;
+    padding-right:20px;
+}
+
+.contact_right_content input{
+    color:#ffffff;
+    background-color:transparent;
+    border:1px solid rgb(125, 125, 125);
+    width:40vw;
+    height:7vh;
+    padding:10px;
+    border-radius:5px;
+    margin-bottom:40px;
+}
+
+textarea{
+   color:#ffffff;
+    background-color:transparent;
+    border:1px solid rgb(125, 125, 125);
+    width:40vw;
+    height:20vh;
+    padding:10px;
+    border-radius:5px; 
+    margin-bottom:40px;
+}
+
+.contact_right_content button{
+    height:7vh;
+    padding:10px;
+    text-align:center;
+    width:40vw;
+    background-color:transparent;
+    color:white;
+    border:1px solid rgb(125, 125, 125);
+    border-radius:5px;
+}
+
+.contact_right_content button:hover{
+    background-color:#55E6A5;
+    transition: background-color 0.3s ease;
+    color:#000;
+}
+.flex_items{
+    display:flex;
+    width:40vw;
+    gap:20px;
+}
+.flex_items input{
+    width:19.5vw;
+}
+
+footer{
+    height:7vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+footer p{
+    padding-top:10px;
+    font-size:13px;
+    color:rgb(199, 199, 199);
+}
+p a{
+    color:#55E6A5;
+}
