@@ -18,7 +18,13 @@
     
         <section id="#home" class="flex items-center justify-between  px-[10%] py-4 w-full bg-opacity-10 backdrop-blur-xl sticky top-0 text-l z-50 ">
     <h1 class="font-bold leading-tight">Hawke</h1>
-    <div class=" flex flex-row justify-around gap-6">
+    <p id="hamburger" class="md:hidden">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9h16.5m-16.5 6.75h16.5" />
+</svg>
+
+    </p>
+    <div id="navbar" class=" hidden md:flex md:flex-row sm:flex-column justify-around gap-6">
         <a href="#home">HOME</a>
         <a href="#about">ABOUT</a>
         <a href="#services">SERVICES</a>
@@ -27,13 +33,13 @@
         <a href="#blog">BLOG</a>
         <a href="#contact">CONTACT</a>
     </div>
-    <button class="bg-white border-none text-black p-3 rounded-md">Hire me!</button>
+    <button class="bg-white border-none text-black p-3 rounded-md hidden md:flex">Hire me!</button>
     </section>
     <section class="border border-[rgb(55,55,55)] rounded-xl mx-12">
  <section class="body">
-    <section class=" flex px-20 justify-center gap-[12%]">
-        <div class=" sticky top-[30px] [transform:perspective(1000px)_rotateY(2deg)_rotateX(-5deg)_rotateY(15deg)] border border-[rgb(55,55,55)] h-fit mt-12 w-[35%]">
-            <img id="profile" src="/Media/profile.png" alt="profile_picture" width="90%" style="background-color:rgb(85,230,165)" class="m-[5%]">
+    <section class=" md:flex px-20 justify-center gap-[12%]">
+        <div class=" md:sticky top-[30px] md:[transform:perspective(1000px)_rotateY(2deg)_rotateX(-5deg)_rotateY(15deg)] border border-[rgb(55,55,55)] h-fit mt-12 md:w-[35%] w-[90%]">
+            <img src="/Media/profile.png" alt="profile_picture" width="90%" style="background-color:rgb(85,230,165)" class="m-[5%]">
             <div class="text_element">
             <h2 class="text-center text-3xl">Ethan Hawke</h2>
             <p class="text-center">@Ethan Hawke</p>
@@ -46,13 +52,14 @@
             </div>
         </div>
         <div class="right_content">
-            <div class="text-6xl my-[16%]">
+            <div class="md:text-6xl text-4xl my-[16%]">
                 <p class="leading-tight">Hello, I’m <span class="text-green-300">Ethan Hawke</span>, <br>Front-end Developer and <br>UX / UI Designer Based <br>in California.</p>
             </div>
-            <div class="flex items-center gap-12 my-[12%]">
-                <div class="flex items-center gap-4">
+            <div class="md:flex items-center gap-12 my-[12%] ">
+                <div class="sm:flex items-center gap-12">
+                    <div class="flex items-center gap-4">
                     <h1 class="text-6xl">14</h1>
-                    <div class="text-xl">
+                    <div class="md:text-xl sm:xs">
                     <p>Years</p>
                     <p>of experience</p>
                     </div>
@@ -64,8 +71,9 @@
                     <p>Worldwide</p>
                     </div>
                 </div>  
-                <div class="download_CV">
-                    <button type="submit">Download CV</button>
+                </div>
+                <div class="download_CV ">
+                    <button type="submit" class=" border-none bg-white text-black p-4 rounded my-6">Download CV</button>
                 </div>
             </div>
             <div class="text-xl mb-[15%]">
@@ -127,11 +135,13 @@
         </div>
         </div>
     </section>
+
+    <!-- SERVICES SECTION -->
     <section class="my-[10%] mx-[5.5%]">
         <div>
             <h1 class="text-3xl pb-6 border-b border-[rgb(55,55,55)]">SERVICES</h1>
-            <div class="my-[5.5%] flex gap-4">
-                <div class=" border border-[rgb(77,77,77)] rounded-md p-8">
+            <div class="my-[5.5%] md:flex gap-4">
+                <div class=" border border-[rgb(77,77,77)] rounded-md p-8 md:w-[23%] w-full my-10">
                     <h1 class="text-6xl pb-3">W</h1>
                     <p class="py-4 font-semibold">Web Design</p>
                     <p>Modern and mobile-ready website that will help you reach all of your marketing</p>
@@ -141,7 +151,7 @@
                         <p class=" border border-[rgb(77,77,77)] rounded-full py-1 px-2 text-xs w-14 text-center">Blog</p>
                     </div>
                 </div>
-                <div class=" border border-[rgb(77,77,77)] rounded-md p-8">
+                <div class=" border border-[rgb(77,77,77)] rounded-md p-8 md:w-[23%] w-full my-10">
                     <h1 class="text-6xl pb-3">D</h1>
                     <p class="py-4 font-semibold">Developments</p>
                     <p>Modern and mobile-ready website that will help you reach all of your marketing.</p>
@@ -151,7 +161,7 @@
                         <p class=" border border-[rgb(77,77,77)] rounded-full py-1 px-2 text-xs w-14 text-center">Blog</p>
                     </div>
                 </div>
-                <div class=" border border-[rgb(77,77,77)] rounded-md p-8">
+                <div class=" border border-[rgb(77,77,77)] rounded-md p-8 md:w-[23%] w-full my-10">
                     <h1 class="text-6xl pb-3">G</h1>
                     <p class="py-4 font-semibold">Graphic Design</p>
                     <p>Modern and mobile-ready website that will help you reach all of your marketing.</p>
@@ -161,7 +171,7 @@
                         <p class=" border border-[rgb(77,77,77)] rounded-full py-1 px-2 text-xs w-14 text-center">Blog</p>
                     </div>
                 </div>
-                <div class=" border border-[rgb(77,77,77)] rounded-md p-8">
+                <div class=" border border-[rgb(77,77,77)] rounded-md p-8 md:w-[23%] w-full my-10">
                     <h1 class="text-6xl pb-3">A</h1>
                     <p class="py-4 font-semibold">Advertising</p>
                     <p>Modern and mobile-ready website that will help you reach all of your marketing.</p>
@@ -228,24 +238,24 @@
 
         </div>
     </section>
-    <section class="border-t border-[rgb(55,55,55)] my-[10%] mx-[5.5%] pt-[8%] grid grid-cols-2 gap-[7%]">
+    <section class="border-t border-[rgb(55,55,55)] my-[10%] mx-[5.5%] pt-[8%] md:grid md:grid-cols-2 gap-[7%]">
         <div class="contact_left_content">
             <p class="border border-[rgb(153,152,152)] w-fit px-4 py-2 rounded-full uppercase text-xs">Get in touch</p>
             <p class="text-6xl py-10">Let's make your brand brilliant!</p>
             <p class="pb-6">If you would like to work with us or just want to get in touch, we’d love to hear from you!</p>
             <p class="text-[rgb(84,225,161)] text-3xl font-semibold underline underline-offset-4 pb-20"><a href="#">+1 840 841 25 69</a> </p>
             <div class="flex gap-4">
-                <a href="#">Facebook</a>
-                <a href="#">Twitter</a>
-                <a href="#">LinkedIn</a>
-                <a href="#">Instagram</a>
+                <a href="#" class="hover:text-[rgb(84,225,161)] transform transition ease-in-out duration-500">Facebook</a>
+                <a href="#" class="hover:text-[rgb(84,225,161)] transform transition ease-in-out duration-500">Twitter</a>
+                <a href="#" class="hover:text-[rgb(84,225,161)] transform transition ease-in-out duration-500">LinkedIn</a>
+                <a href="#" class="hover:text-[rgb(84,225,161)] transform transition ease-in-out duration-500">Instagram</a>
             </div>
         </div>
         <div class="contact_right_content">
             <form action="" method="POST">
-                <div class="flex_items w-full">
-                <input type="text" name="name" placeholder="Name" class="w-[47%] mr-4 mb-8 py-3 pl-4 bg-transparent border border-[rgb(55,55,55)] rounded-md text-gray-500">
-                <input type="email" name="email" placeholder="Email" class="w-[47%] py-3 mb-8 pl-4 bg-transparent border border-[rgb(55,55,55)] rounded-md">
+                <div class="md:flex w-full mt-10">
+                <input type="text" name="name" placeholder="Name" class="md:w-[47%] w-full mr-4 mb-8 py-3 pl-4 bg-transparent border border-[rgb(55,55,55)] rounded-md text-gray-500"><br>
+                <input type="email" name="email" placeholder="Email" class="md:w-[47%] w-full py-3 mb-8 pl-4 bg-transparent border border-[rgb(55,55,55)] rounded-md">
                 </div>
                 <input type="text" name="subject" placeholder="Subject" class="w-[100%] py-3 mb-8 pl-4  bg-transparent border border-[rgb(55,55,55)] rounded-md"><br>
                 <textarea name="message" rows="5" cols="20" placeholder="message" class=" w-[100%] py-3 mb-8 pl-4 bg-transparent border border-[rgb(55,55,55)] rounded-md"></textarea><br>
@@ -260,5 +270,6 @@
     <footer>
         <p class="flex justify-center py-6">© 2023 Hawke is Proudly Powered by <a href="https://themeforest.net/user/themescamp" class="text-[rgb(84,225,161)] underline underline-offset-4 py-">ThemesCamp</a> </p>
     </footer>
+    <script src="index.js"></script>
 </body>
 </html>
